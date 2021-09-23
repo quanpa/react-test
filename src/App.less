@@ -1,0 +1,45 @@
+@import '~antd/dist/antd.less';
+
+.ant-layout-header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  border-bottom: 1px solid #001529;
+  h2 {
+    margin: 0;
+  }
+}
+
+.ant-menu-dark {
+  .ant-menu-item-selected {
+    background: none !important;
+  }
+}
+
+.account-search-input {
+  min-width: 215px;
+}
+
+.ant-layout-sider {
+  padding-top: 20px;
+  &.ant-layout-sider-below {
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.ant-table {
+  .account-row-wrap {
+    padding: 0;
+    .account-row {
+      border-top: 1px solid #f0f0f0;
+      padding: 10px;
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+}
