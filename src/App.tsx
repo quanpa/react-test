@@ -5,13 +5,13 @@ import {Layout, Menu} from 'antd';
 import User from "./components/User/User";
 import AccountList from "./components/AccountList/AccountList";
 import Search from "./components/Search/Search";
-import Title from "antd/es/typography/Title";
-import MenuItem from "antd/es/menu/MenuItem";
+import Title from "antd/lib/typography/Title";
+import MenuItem from "antd/lib/menu/MenuItem";
 import { SearchOutlined, UserOutlined } from '@ant-design/icons';
 
 const { Header, Sider, Content } = Layout;
 
-function UserDetailPage() {
+const UserDetailPage = () => {
   const {id} = useParams<{id: string}>();
   return <Link to={`/user/${id}`}>User Detail</Link>
 }

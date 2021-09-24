@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.9"
+    "@types/react-router-dom": "^5.1.9",
+    "msw": "^0.35.0"
   }
 }
