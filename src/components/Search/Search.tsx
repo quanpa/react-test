@@ -24,8 +24,10 @@ class Search extends React.Component<SearchProps,SearchState> {
   handleClickButton() {
     fetch(`https://sample-accounts-api.herokuapp.com/users/${this.state.idUser}`)
       .then(response => response.json())
-      .then(() => this.setState({ redirect: true }))
-      .catch(() => this.errorMessage());
+      .then(
+        (result) => this.setState({ redirect: true }),
+        (error) => this.errorMessage()
+      )
   }
 
   render() {

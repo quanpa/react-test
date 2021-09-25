@@ -18,8 +18,10 @@ class AccountList extends React.Component<any, AccountListState> {
     if (!idUser) return;
     fetch(`https://sample-accounts-api.herokuapp.com/users/${idUser}/accounts`)
       .then(response => response.json())
-      .then(data => this.setState({ accounts: [...data] }))
-      .catch(e => console.log(e));
+      .then(
+        (data) => this.setState({ accounts: [...data] }),
+        (error) => console.log(error)
+      )
   }
 
   render() {

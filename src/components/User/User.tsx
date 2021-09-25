@@ -23,9 +23,11 @@ class User extends React.Component<any, UserState> {
     const idUser = this.props.match?.params.id;
     if (!idUser) return;
     fetch(`https://sample-accounts-api.herokuapp.com/users/${idUser}`)
-        .then(response => response.json())
-        .then(data => this.setState({ userData: {...data.attributes}}))
-        .catch(e => console.log(e));
+      .then(response => response.json())
+      .then(
+        (data) => this.setState({ userData: {...data.attributes}}),
+        (error) => console.log(error)
+      )
   }
 
   render() {
