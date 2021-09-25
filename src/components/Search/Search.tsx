@@ -17,8 +17,8 @@ class Search extends React.Component<SearchProps,SearchState> {
     }
   }
 
-  errorMessage = () => {
-    message.error('Not found user!');
+  errorMessage = async () => {
+    await message.error('Not found user!');
   };
 
   handleClickButton() {
