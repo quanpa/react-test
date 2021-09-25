@@ -1,5 +1,5 @@
 import React from "react";
-import {Divider, Table} from "antd";
+import {Table} from "antd";
 import {ColumnProps} from "antd/lib/table";
 import {Link} from "react-router-dom";
 
@@ -20,7 +20,7 @@ class User extends React.Component<any, UserState> {
   }
 
   componentDidMount() {
-    const idUser = this.props.match.params.id;
+    const idUser = this.props.match?.params.id;
     if (!idUser) return;
     fetch(`https://sample-accounts-api.herokuapp.com/users/${idUser}`)
         .then(response => response.json())

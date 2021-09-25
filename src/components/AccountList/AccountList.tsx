@@ -14,7 +14,7 @@ class AccountList extends React.Component<any, AccountListState> {
   }
 
   componentDidMount() {
-    const idUser = this.props.match.params.id;
+    const idUser = this.props.match?.params.id;
     if (!idUser) return;
     fetch(`https://sample-accounts-api.herokuapp.com/users/${idUser}/accounts`)
       .then(response => response.json())
